@@ -73,12 +73,12 @@
 
     <script>
         function calculateTip() {
-    // Get input values
+  
     const billAmount = parseFloat(document.getElementById('bill').value);
     const tipPercentage = parseFloat(document.getElementById('tip').value);
     const numberOfPeople = parseInt(document.getElementById('people').value, 10);
 
-    // Validate inputs
+   
     if (isNaN(billAmount) || billAmount <= 0) {
         alert("Please enter a valid bill amount.");
         return;
@@ -92,13 +92,13 @@
         return;
     }
 
-    // Calculate tip and total
+   
     const tipAmount = billAmount * (tipPercentage / 100);
     const totalAmount = billAmount + tipAmount;
     const tipPerPerson = tipAmount / numberOfPeople;
     const totalPerPerson = totalAmount / numberOfPeople;
 
-    // Display results
+   
     const resultElement = document.getElementById('result');
     resultElement.innerHTML = `
         <p>Total Bill Amount: $${totalAmount.toFixed(2)}</p>
